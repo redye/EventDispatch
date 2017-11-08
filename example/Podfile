@@ -1,0 +1,22 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+
+source 'http://stash.weimob.com/scm/fas/wfspecs.git'
+
+target 'EventDispatch' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for EventDispatch
+  pod 'Yoga'
+  pod 'React/Core'
+  pod 'React/DevSupport'
+  pod 'React/RCTImage'
+  pod 'React/RCTNetwork'
+  pod 'React/RCTText'
+  pod 'React/RCTWebSocket'
+  pod 'React/RCTAnimation'
+  pod 'React/RCTLinkingIOS'
+
+end

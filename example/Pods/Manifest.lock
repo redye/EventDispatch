@@ -1,0 +1,43 @@
+PODS:
+  - React/Core (0.44.3.1):
+    - React/cxxreact
+    - Yoga (= 0.44.3.React)
+  - React/cxxreact (0.44.3.1):
+    - React/jschelpers
+  - React/DevSupport (0.44.3.1):
+    - React/Core
+    - React/RCTWebSocket
+  - React/jschelpers (0.44.3.1)
+  - React/RCTAnimation (0.44.3.1):
+    - React/Core
+  - React/RCTImage (0.44.3.1):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.44.3.1):
+    - React/Core
+  - React/RCTNetwork (0.44.3.1):
+    - React/Core
+  - React/RCTText (0.44.3.1):
+    - React/Core
+  - React/RCTWebSocket (0.44.3.1):
+    - React/Core
+  - Yoga (0.44.3.React)
+
+DEPENDENCIES:
+  - React/Core
+  - React/DevSupport
+  - React/RCTAnimation
+  - React/RCTImage
+  - React/RCTLinkingIOS
+  - React/RCTNetwork
+  - React/RCTText
+  - React/RCTWebSocket
+  - Yoga
+
+SPEC CHECKSUMS:
+  React: 228fc77efa0ffb35be69d3bfbfc568fe52a87daa
+  Yoga: '06695437730591d94249753db7c44e464c46afb5'
+
+PODFILE CHECKSUM: '0996918066c0aad50b2036d674a8639bf4dc0485'
+
+COCOAPODS: 1.2.1
