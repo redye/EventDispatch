@@ -18,10 +18,10 @@
 * 通过从原生导出的 Module 进行事件通信，即当点击按钮时，调用该 Module ，让 Module 来处理后续的事件传递。这样，问题就转换到原生代码，处理方式就可以有多种选择了。如果，修改标题之后，你还想知道修改的结果，那么你也可以传递一个回调给原生，将修改的结果传回到 JS。
 * 从 JS 发通知给原生，先考察一下这个方法是否可行呢？在我了解到 react-native 中，还没有使用过这种方法，在读到这篇文章的诸位大神中，如果有用到这种方法，还请多加指教，不胜感激。
 
-		/**
- 		 * callback 要写在最后面
- 		 */
-		RCT_EXPORT_METHOD(handleEvent:(NSDictionary *)userInfo callback:(RCTResponseSenderBlock)callback) {
+	/**
+ 	 * callback 要写在最后面
+ 	 */
+	RCT_EXPORT_METHOD(handleEvent:(NSDictionary *)userInfo callback:(RCTResponseSenderBlock)callback) {
     		NSLog(@"事件信息=====> %@", userInfo);
     		// 切换到主线程，JS 代码是运行在 JS 线程上的
     		dispatch_async(dispatch_get_main_queue(), ^{
@@ -30,20 +30,20 @@
         		NSArray *keys = [userInfo isKindOfClass:[NSDictionary class]] ? userInfo.allKeys : nil;
         		__block BOOL isSuccess = NO;
         		if (keys && keys.count > 0) {
-            		NSString *key = [keys firstObject];
-            		[navigation.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                		if ([obj isKindOfClass:NSClassFromString(key)]) {
-                    		obj.title = [userInfo objectForKey:key];
-                    		*stop = YES;
-                    		isSuccess = YES;
-                		}
-            		}];
+            			NSString *key = [keys firstObject];
+            			[navigation.viewControllers enumerateObjectsUsingBlock:^(__kindof UIViewController * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                			if ([obj isKindOfClass:NSClassFromString(key)]) {
+                    				obj.title = [userInfo objectForKey:key];
+                    				*stop = YES;
+                    				isSuccess = YES;
+                			}
+            			}];
         		}
         		if (callback) {
             		callback(@[[NSString stringWithFormat:@"修改导航标题%@", isSuccess ? @"成功" : @"失败"]]);
         		}
     		});
-		}
+	}
 
 
 ### 从原生到 JS
