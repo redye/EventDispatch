@@ -16,6 +16,10 @@
 		D10902A61FB1875400CAECDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D10902A51FB1875400CAECDC /* main.m */; };
 		D10904C81FB1B4EE00CAECDC /* RNBridgeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D10904C71FB1B4EE00CAECDC /* RNBridgeManager.m */; };
 		D10904CE1FB2EDEB00CAECDC /* EventHandlerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D10904CD1FB2EDEB00CAECDC /* EventHandlerModule.m */; };
+		D10904D11FB430E600CAECDC /* JSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10904D01FB430E600CAECDC /* JSViewController.m */; };
+		D10904D41FB430EE00CAECDC /* OCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10904D31FB430EE00CAECDC /* OCViewController.m */; };
+		D10904D71FB4351400CAECDC /* EventTowerModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D10904D61FB4351400CAECDC /* EventTowerModule.m */; };
+		D10904DB1FB4570600CAECDC /* JSEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D10904DA1FB4570600CAECDC /* JSEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,15 @@
 		D10904CA1FB1B75C00CAECDC /* EventDispatch.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDispatch.pch; sourceTree = "<group>"; };
 		D10904CC1FB2EDEB00CAECDC /* EventHandlerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventHandlerModule.h; sourceTree = "<group>"; };
 		D10904CD1FB2EDEB00CAECDC /* EventHandlerModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventHandlerModule.m; sourceTree = "<group>"; };
+		D10904CF1FB430E600CAECDC /* JSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSViewController.h; sourceTree = "<group>"; };
+		D10904D01FB430E600CAECDC /* JSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSViewController.m; sourceTree = "<group>"; };
+		D10904D21FB430EE00CAECDC /* OCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OCViewController.h; sourceTree = "<group>"; };
+		D10904D31FB430EE00CAECDC /* OCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCViewController.m; sourceTree = "<group>"; };
+		D10904D51FB4351400CAECDC /* EventTowerModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventTowerModule.h; sourceTree = "<group>"; };
+		D10904D61FB4351400CAECDC /* EventTowerModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EventTowerModule.m; sourceTree = "<group>"; };
+		D10904D81FB4381B00CAECDC /* EventDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventDef.h; sourceTree = "<group>"; };
+		D10904D91FB4570600CAECDC /* JSEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSEventViewController.h; sourceTree = "<group>"; };
+		D10904DA1FB4570600CAECDC /* JSEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSEventViewController.m; sourceTree = "<group>"; };
 		D58BC01151168493943C271C /* libPods-EventDispatch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EventDispatch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +108,12 @@
 				D10902971FB1875400CAECDC /* AppDelegate.m */,
 				D10902991FB1875400CAECDC /* RootViewController.h */,
 				D109029A1FB1875400CAECDC /* RootViewController.m */,
+				D10904CF1FB430E600CAECDC /* JSViewController.h */,
+				D10904D01FB430E600CAECDC /* JSViewController.m */,
+				D10904D21FB430EE00CAECDC /* OCViewController.h */,
+				D10904D31FB430EE00CAECDC /* OCViewController.m */,
+				D10904D91FB4570600CAECDC /* JSEventViewController.h */,
+				D10904DA1FB4570600CAECDC /* JSEventViewController.m */,
 				D10904C61FB1B4EE00CAECDC /* RNBridgeManager.h */,
 				D10904C71FB1B4EE00CAECDC /* RNBridgeManager.m */,
 				D10904C91FB1B6CE00CAECDC /* DevelopmentDefine.h */,
@@ -113,6 +132,9 @@
 			children = (
 				D10904CC1FB2EDEB00CAECDC /* EventHandlerModule.h */,
 				D10904CD1FB2EDEB00CAECDC /* EventHandlerModule.m */,
+				D10904D51FB4351400CAECDC /* EventTowerModule.h */,
+				D10904D61FB4351400CAECDC /* EventTowerModule.m */,
+				D10904D81FB4381B00CAECDC /* EventDef.h */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -240,9 +262,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D10904C81FB1B4EE00CAECDC /* RNBridgeManager.m in Sources */,
+				D10904D11FB430E600CAECDC /* JSViewController.m in Sources */,
+				D10904D41FB430EE00CAECDC /* OCViewController.m in Sources */,
+				D10904DB1FB4570600CAECDC /* JSEventViewController.m in Sources */,
 				D109029B1FB1875400CAECDC /* RootViewController.m in Sources */,
 				D10902A61FB1875400CAECDC /* main.m in Sources */,
 				D10902981FB1875400CAECDC /* AppDelegate.m in Sources */,
+				D10904D71FB4351400CAECDC /* EventTowerModule.m in Sources */,
 				D10904CE1FB2EDEB00CAECDC /* EventHandlerModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

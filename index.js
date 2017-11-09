@@ -1,5 +1,12 @@
 import { AppRegistry } from 'react-native';
+
+
+import './app/NativeModule';
+
 import App from './App';
+import SendEvent from './app/pages/SendEvent';
+import ReceiveEvent from './app/pages/ReceiveEvent';
+import Emitter from  './app/pages/Emitter';
 
 
 
@@ -15,7 +22,8 @@ if (!__DEV__) {
     };
 }
 
-import './app/NativeModule';
-
 
 AppRegistry.registerComponent('EventDispatch', () => App);
+AppRegistry.registerComponent('SendEvent', () => SendEvent);
+AppRegistry.registerComponent('ReceiveEvent', () => ReceiveEvent);
+AppRegistry.registerComponent('Emitter', () => Emitter);

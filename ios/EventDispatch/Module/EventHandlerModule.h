@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <React/RCTBridgeModule.h>
 
+
+/**
+ 通过一个 Module 处理从 JS 发起的事件
+ */
 @interface EventHandlerModule : NSObject<RCTBridgeModule>
 
 @end

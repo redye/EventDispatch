@@ -4,5 +4,6 @@ import {
 } from 'react-native';
 
 window.app = {
-    EventHandler: NativeModules.EventHandler
+    EventHandler: NativeModules.EventHandler,
+    EventTower: NativeModules.EventTower,
 }

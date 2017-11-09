@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -11,15 +5,9 @@ import {
   Text,
   View,
   TouchableWithoutFeedback,
-  NativeModules
+  NativeModules,
+  DeviceEventEmitter
 } from 'react-native';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 /**
  * 可以直接在这里导入原生 Module，更好的方法是
@@ -27,21 +15,41 @@ const instructions = Platform.select({
 */
 // const EventHandler = NativeModules.EventHandler;
 
-export default class App extends Component {
+export default class SendEvent extends Component {
 
   constructor(props) {
     super(props);
   }
 
-  _onPress = () => {
+  _onPress = (event, title='小苹果') => {
     console.log('改变导航的标题');
-    
     // 可以关联某个页面
     app.EventHandler.handleEvent({
-      "JSViewController": "你是我的小呀小苹果"
+      "JSViewController": title
     }, (response) => {
       console.log('回调结果 =====>', response);
     });
+  }
+
+  _addListener = () => {
+    // 接收 JS 通知
+    this.subscription = DeviceEventEmitter.addListener("TitleWillChangEmitter", (userInfo) => {
+      console.log('接收到来自 JS 的通知======>', userInfo);
+      this._onPress(null, userInfo.title ? userInfo.title : "小跳蛙");
+    });
+  }
+
+  _removeListener = () => {
+    console.log('移除监听');
+    this.subscription && this.subscription.remove();
+  }
+
+  componentDidMount() {
+    this._addListener();
+  }
+
+  componentWillUnmount() {
+    this._removeListener();
   }
 
   render() {
