@@ -40,7 +40,7 @@
             				}];
         			}
         			if (callback) {
-            			callback(@[[NSString stringWithFormat:@"修改导航标题%@", isSuccess ? @"成功" : @"失败"]]);
+            				callback(@[[NSString stringWithFormat:@"修改导航标题%@", isSuccess ? @"成功" : @"失败"]]);
         			}
     			});
 		}
